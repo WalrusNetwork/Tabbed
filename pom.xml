@@ -4,20 +4,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.keenant.tabbed</groupId>
-    <artifactId>parent</artifactId>
-    <packaging>pom</packaging>
+    <groupId>com.keenant</groupId>
+    <artifactId>tabbed</artifactId>
     <version>1.8-SNAPSHOT</version>
-    <modules>
-        <module>plugin</module>
-        <module>core</module>
-    </modules>
 
     <repositories>
-        <repository>
-            <id>spigot-repo</id>
-            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
-        </repository>
         <repository>
             <id>dmulloy2-repo</id>
             <url>http://repo.dmulloy2.net/nexus/repository/public/</url>
@@ -35,17 +26,17 @@
 
         <!-- Spigot API -->
         <dependency>
-            <groupId>org.spigotmc</groupId>
-            <artifactId>spigot-api</artifactId>
-            <version>1.12.2-R0.1-SNAPSHOT</version>
+            <groupId>network.stratus</groupId>
+            <artifactId>sportpaper-api</artifactId>
+            <version>1.8.8-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
 
         <!-- Bukkit API -->
         <dependency>
-            <groupId>org.bukkit</groupId>
-            <artifactId>bukkit</artifactId>
-            <version>1.12.2-R0.1-SNAPSHOT</version>
+            <groupId>network.stratus</groupId>
+            <artifactId>sportpaper</artifactId>
+            <version>1.8.8-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
 

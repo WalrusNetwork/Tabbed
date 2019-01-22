@@ -144,7 +144,7 @@ public class Skins {
      * @param color
      * @return
      */
-    public static Skin getDot(ChatColor color) {
+    public static Skin  getDot(ChatColor color) {
         return DOT_SKINS.get(color.ordinal());
     }
 
