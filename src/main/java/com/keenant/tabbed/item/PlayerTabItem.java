@@ -32,11 +32,11 @@ public class PlayerTabItem implements TabItem {
     }
 
     public PlayerTabItem(Player player, PlayerProvider<String> textProvider) {
-        this(player, textProvider, SKIN_PROVIDER);
+        this(player, textProvider, skinProvier(player));
     }
 
     public PlayerTabItem(Player player) {
-        this(player, LIST_NAME_PROVIDER);
+        this(player, listNameProvider(player));
     }
 
     @Override
@@ -81,33 +81,21 @@ public class PlayerTabItem implements TabItem {
         }
     }
 
-    private static PlayerProvider<String> NAME_PROVIDER = new PlayerProvider<String>() {
-        @Override
-        public String get(Player player) {
-            return player.getName();
-        }
-    };
+    private static PlayerProvider<String> nameProvider(Player viewer) {
+        return player -> player.getName(viewer);
+    }
 
-    private static PlayerProvider<String> DISPLAY_NAME_PROVIDER = new PlayerProvider<String>() {
-        @Override
-        public String get(Player player) {
-            return player.getDisplayName();
-        }
-    };
+    private static PlayerProvider<String> displayNameProvider(Player viewer) {
+        return player -> player.getDisplayName(viewer);
+    }
 
-    private static PlayerProvider<String> LIST_NAME_PROVIDER = new PlayerProvider<String>() {
-        @Override
-        public String get(Player player) {
-            return player.getPlayerListName();
-        }
-    };
+    private static PlayerProvider<String> listNameProvider(Player viewer) {
+        return player -> player.getPlayerListName(viewer);
+    }
 
-    private static PlayerProvider<Skin> SKIN_PROVIDER = new PlayerProvider<Skin>() {
-        @Override
-        public Skin get(Player player) {
-            return Skins.getPlayer(player);
-        }
-    };
+    private static PlayerProvider<Skin> skinProvier(Player viewer) {
+        return player -> Skins.getPlayer(player, viewer);
+    }
 
     public interface PlayerProvider<T> {
         T get(Player player);

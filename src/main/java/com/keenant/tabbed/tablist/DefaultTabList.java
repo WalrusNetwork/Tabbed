@@ -44,7 +44,7 @@ public final class DefaultTabList extends SimpleTabList implements Listener {
                         continue;
 
                     String prevName = names.get(target);
-                    String currName = target.getPlayerListName();
+                    String currName = target.getPlayerListName(player);
 
                     if (prevName.equals(currName))
                         continue;
@@ -79,7 +79,7 @@ public final class DefaultTabList extends SimpleTabList implements Listener {
 
     private void addPlayer(Player player) {
         add(getInsertLocation(player), new PlayerTabItem(player));
-        this.names.put(player, player.getPlayerListName());
+        this.names.put(player, player.getPlayerListName(getPlayer()));
     }
 
     private int getTabItemIndex(Player player) {

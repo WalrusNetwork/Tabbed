@@ -144,20 +144,21 @@ public class Skins {
      * @param color
      * @return
      */
-    public static Skin  getDot(ChatColor color) {
+    public static Skin getDot(ChatColor color) {
         return DOT_SKINS.get(color.ordinal());
     }
 
     /**
      * Get a skin from an online player.
      * @param player
+     * @param viewer
      * @return
      */
-    public static Skin getPlayer(Player player) {
+    public static Skin getPlayer(Player player, Player viewer) {
         WrappedSignedProperty property = DEFAULT_SKIN.getProperty();
-        Collection<WrappedSignedProperty> properties = WrappedGameProfile.fromPlayer(player).getProperties().get(Skin.TEXTURE_KEY);
-        if (properties != null && properties.size() > 0)
-            property = properties.iterator().next();
+        org.bukkit.Skin skin = player.getSkin(viewer);
+        if (skin.getData() != null)
+            property = new WrappedSignedProperty(Skin.TEXTURE_KEY, skin.getData(), skin.getSignature());
         return new Skin(property);
     }
 
