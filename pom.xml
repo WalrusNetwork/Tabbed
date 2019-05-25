@@ -13,7 +13,22 @@
             <id>dmulloy2-repo</id>
             <url>http://repo.dmulloy2.net/nexus/repository/public/</url>
         </repository>
+        <repository>
+            <id>stratus-public</id>
+            <url>https://repo.stratus.network/repository/maven-public/</url>
+        </repository>
     </repositories>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>stratus-public</id>
+            <url>https://repo.stratus.network/repository/maven-public/</url>
+        </snapshotRepository>
+        <repository>
+            <id>stratus-public</id>
+            <url>https://repo.stratus.network/repository/maven-public/</url>
+        </repository>
+    </distributionManagement>
 
     <dependencies>
         <!-- Lombok -->
