@@ -14,19 +14,19 @@
             <url>http://repo.dmulloy2.net/nexus/repository/public/</url>
         </repository>
         <repository>
-            <id>stratus-public</id>
-            <url>https://repo.stratus.network/repository/maven-public/</url>
+            <id>walrus-public</id>
+            <url>https://maven-public.walrus.network</url>
         </repository>
     </repositories>
 
     <distributionManagement>
         <snapshotRepository>
-            <id>stratus-public</id>
-            <url>https://repo.stratus.network/repository/maven-public/</url>
+            <id>walrus-public</id>
+            <url>https://maven-public.walrus.network</url>
         </snapshotRepository>
         <repository>
-            <id>stratus-public</id>
-            <url>https://repo.stratus.network/repository/maven-public/</url>
+            <id>walrus-public</id>
+            <url>https://maven-public.walrus.network</url>
         </repository>
     </distributionManagement>
 
@@ -41,7 +41,7 @@
 
         <!-- Spigot API -->
         <dependency>
-            <groupId>network.stratus</groupId>
+            <groupId>network.walrus</groupId>
             <artifactId>sportpaper-api</artifactId>
             <version>1.8.8-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
@@ -49,7 +49,7 @@
 
         <!-- Bukkit API -->
         <dependency>
-            <groupId>network.stratus</groupId>
+            <groupId>network.walrus</groupId>
             <artifactId>sportpaper</artifactId>
             <version>1.8.8-R0.1-SNAPSHOT</version>
             <scope>provided</scope>

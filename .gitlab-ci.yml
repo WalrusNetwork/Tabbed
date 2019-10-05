@@ -17,6 +17,7 @@ maven:
     when: stuck_or_timeout_failure
 
 trigger_downstream:
+  image: maven:3.6.1-jdk-8-slim
   stage: deploy
   script:
     # Walrus
