@@ -14,19 +14,19 @@
             <url>http://repo.dmulloy2.net/nexus/repository/public/</url>
         </repository>
         <repository>
-            <id>walrus-public</id>
-            <url>https://maven.walrus.gg/repository/walrus-public/</url>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/WalrusNetwork/Tusk</url>
         </repository>
     </repositories>
 
     <distributionManagement>
         <snapshotRepository>
-            <id>walrus-public</id>
-            <url>https://maven.walrus.gg/repository/walrus-public/</url>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/WalrusNetwork/Tusk</url>
         </snapshotRepository>
         <repository>
-            <id>walrus-public</id>
-            <url>https://maven.walrus.gg/repository/walrus-public/</url>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/WalrusNetwork/Tusk</url>
         </repository>
     </distributionManagement>
 
@@ -35,7 +35,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.16.6</version>
+            <version>1.18.22</version>
             <scope>provided</scope>
         </dependency>
 
